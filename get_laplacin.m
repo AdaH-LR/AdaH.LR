@@ -6,7 +6,6 @@ Path(sum(Path,2)==0,:)=[];
 % Empty_Index=find(sum(Path,2)==0);
 
 [paths,~]=size(Path);
-%%
 H=zeros(col);
 for i=1:col
     for j=1:paths
