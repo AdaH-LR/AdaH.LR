@@ -1,5 +1,4 @@
 function [Beta,intercept]=Ada_HRM_Logistics(X,y,Path,A,alpha,lambda,sigma)
-%在超图正则化的基础上对统计学上高相关的特征增加约束（还行）
 [row,col]=size(X);
 % [paths,~]=size(Path);
 % 
