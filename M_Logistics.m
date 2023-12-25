@@ -21,7 +21,6 @@ lambda2=alpha;
 % end
 % H=H-diag(diag(H));
 % WL=sum(H);
-% %得到邻接矩阵以及矩阵中每个节点的度
 % L_num=sum(sum(H));
 % B=zeros(col);
 % for i=1:col
