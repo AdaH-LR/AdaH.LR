@@ -1,9 +1,8 @@
 function [Beta,intercept]=WEN_Logistics(X,y,alpha,lambda)
-%ÔÚÍ¨Â·µÄ»ù´¡ÉÏ¿¼ÂÇÁËÍ³¼ÆÑ§Ïà¹ØĞÔ
 [row,col]=size(X);
 
 %%
-%È¨Öµ
+%æƒå€¼
 miu1=[];
 for i=1:col
     mean_c1=mean(X(find(y==1),i));
