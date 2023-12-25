@@ -27,9 +27,9 @@ Lasso_beta=[];
 AH_beta=[];
 AWH_beta=[];
 AWHRM_beta=[];
-MNet1_beta=[];  %在同一通路的值为SIM，否则为零
-MNet2_beta=[];  %超图和SIM相加（都进行归一化）
-MNet3_beta=[];  %高斯核
+MNet1_beta=[]; 
+MNet2_beta=[];  
+MNet3_beta=[]; 
 %%
 n=3;
 for i=1:n
@@ -56,12 +56,12 @@ for i=1:n
         end
     end
     %%
-    %构建拉普拉斯矩阵
+    
     tic
     [H,~,A,B,L,Lh,L1,L2,L3]=get_laplacin(X_train,GSE10072_Path,SIM,Union_SIM);
     toc
     sigma=0.5
-    fprintf('构建得到拉普拉斯矩阵\n\n');
+    fprintf('\n\n');
     %%
     %Net
 %     lambda_l=[0.2,0.1,0.05,0.02,0.01,0.005,0.002,0.001];
@@ -260,7 +260,7 @@ for i=1:n
         end
     end
     %%
-    %Path+GO(在同一通路的值为SIM，否则为零)
+   
 %     lambda_mnet1=[0.2,0.1,0.05,0.02,0.01,0.005,0.002,0.001];
 %     alpha_mnet1=[0.1,0.05,0.02,0.01,0.005,0.001,0.0001,0.00001];
 % %     lambda_mnet1=[0.02,0.01,0.005];
@@ -283,7 +283,7 @@ for i=1:n
 %     end
     
     %%
-    %Path+GO(超图和SIM相加（都进行归一化）)
+    
 %     lambda_mnet2=[0.2,0.1,0.05,0.02,0.01,0.005,0.002,0.001];
 %     alpha_mnet2=[0.1,0.05,0.02,0.01,0.005,0.001,0.0001,0.00001];
 %     lambda_mnet2=[0.1,0.05];
@@ -306,7 +306,7 @@ for i=1:n
 %     end
     
     %%
-    %Path+GO(高斯核)
+  
 %     lambda_mnet3=[0.2,0.1,0.05,0.02,0.01,0.005,0.002,0.001];
 %     alpha_mnet3=[0.1,0.05,0.02,0.01,0.005,0.001,0.0001,0.00001];
 % %     lambda_mnet3=[0.1,0.05];
