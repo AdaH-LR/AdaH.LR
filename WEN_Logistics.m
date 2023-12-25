@@ -1,7 +1,6 @@
 function [Beta,intercept]=WEN_Logistics(X,y,alpha,lambda)
 [row,col]=size(X);
 
-%%
 %权值
 miu1=[];
 for i=1:col
