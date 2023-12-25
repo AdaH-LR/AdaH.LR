@@ -13,7 +13,6 @@ if nargin < 2
   ndx = find(sigma2 < eps);
   sigma2(ndx) = 1;
 end
-
 S = M - repmat(mu, [nrows 1]);
 if ncols > 0
     S = S ./ repmat(sigma2, [nrows 1]);
