@@ -7,7 +7,6 @@ Path(sum(Path,2)==0,:)=[];
 
 [paths,~]=size(Path);
 %%
-%»ùÒòÍ¨Â·ÁÚ½Ó¾ØÕó
 H=zeros(col);
 for i=1:col
     for j=1:paths
@@ -24,7 +23,6 @@ for i=1:col
 end
 H=H-diag(diag(H));
 %%
-%Í³¼ÆÑ§ÁÚ½Ó¾ØÕó(Å·Ê½¾àÀë£©
 % F_Weight=zeros(col);
 % F_Weight_temp=zeros(col);
 % sum_w=0;
@@ -49,7 +47,6 @@ H=H-diag(diag(H));
 % F_Weight = (F_Weight'+F_Weight)./2;
 F_Weight=0;
 %%
-%Í³¼ÆÑ§ÁÚ½Ó¾ØÕó
 A=abs(corr(X)).^2;
 A=A-diag(diag(A));
 for i = 1: col
@@ -60,19 +57,17 @@ for i = 1: col
     end
 end
 %%
-%»ùÒòÍ¨Â·À­ÆÕÀ­Ë¹¾ØÕó
 DL=diag(H*oe);
 L=DL-H;
 %%
-%³¬Í¼À­ÆÕÀ­Ë¹¾ØÕó
 Weight=Path*oe;
 LW=diag(Weight);
 De=diag(Weight);
 Dv=diag(Weight'*Path);
 Lh=Dv-(Path'*LW/De*Path);
 %%
-%modularity¾ØÕó
-WL=sum(H);  %µÃµ½ÁÚ½Ó¾ØÕóÒÔ¼°¾ØÕóÖĞÃ¿¸ö½ÚµãµÄ¶È
+%modularity
+WL=sum(H);  
 L_num=sum(sum(H));
 B=zeros(col);
 for i=1:col
@@ -83,24 +78,19 @@ for i=1:col
     end
 end
 %%
-%»ùÒò±¾ÌåÏàËÆĞÔÀ­ÆÕÀ­Ë¹¾ØÕó
 D_SIM = diag(sum(SIM));
 L_SIM = D_SIM-SIM;
 %%
-%»ùÒòÍ¨Â·+»ùÒò±¾Ìå+Í³¼ÆÑ§ĞÅÏ¢
 % A = (1-sigma)*SIM+sigma*F_Weight;
 % A(find(H==0)) = 0;
 % D2 = diag(sum(A));
 % L2 = D2-A;
-%½áºÏ»ùÒò±¾Ìå
 %%
-%»ùÒòÍ¨Â·+»ùÒò±¾Ìå
 SIM_temp = SIM;
 SIM_temp(find(H==0))=0;
 D_SIM_temp = diag(sum(SIM_temp));
 L_SIM_temp = D_SIM_temp-SIM_temp;
 %%
-%³¬Í¼À­ÆÕÀ­Ë¹¾ØÕó+»ùÒò±¾ÌåÀ­ÆÕÀ­Ë¹¾ØÕó
 sigma=0.5;
 I=eye(col);
 temp1=diag(diag(Dv).^(-0.5));
@@ -109,21 +99,21 @@ reg_Lh=I-temp1*(Path'*LW/De*Path)*temp1;
 reg_SIM=I-temp2*SIM*temp2;
 L_H_SIM=sigma*reg_Lh+(1-sigma)*reg_SIM;
 %%
-%¸ßË¹ºË¡¶similarity network fusion for aggregating data types on a genomic scale¡·
+%ã€Šsimilarity network fusion for aggregating data types on a genomic scaleã€‹
 D_Con_SIM = diag(sum(Con_SIM));
 L_Con_SIM = D_Con_SIM-Con_SIM;
 %%
-% Matrix1=H;            %»ùÒòÍ¨Â·ÁÚ½Ó¾ØÕó
-% Matrix2=F_Weight;     %Å·ÊÏ¾àÀëÁÚ½Ó¾ØÕó
-% Matrix3=A;            %Æ¤¶ûÑ·Ïà¹ØÏµÊıÁÚ½Ó¾ØÕó
-% Matrix4=B;            %Modularity¾ØÕó
-% L1=L;                 %»ùÒòÍ¨Â·À­ÆÕÀ­Ë¹¾ØÕó
-% L2=Lh;                %³¬Í¼À­ÆÕÀ­Ë¹¾ØÕó
-% % L3=L_SIM;             %±¾ÌåÏàËÆĞÔÀ­ÆÕÀ­Ë¹¾ØÕó
-% L3=L_SIM_temp;        %»ùÒòÍ¨Â·+»ùÒò±¾ÌåÀ­ÆÕÀ­Ë¹¾ØÕó
-% % L5=L_N_SIM;           %»ùÒòÍ¨Â·À­ÆÕÀ­Ë¹¾ØÕó+»ùÒò±¾ÌåÀ­ÆÕÀ­Ë¹¾ØÕó
-% L4=L_H_SIM;           %³¬Í¼À­ÆÕÀ­Ë¹¾ØÕó+»ùÒò±¾ÌåÀ­ÆÕÀ­Ë¹¾ØÕó
-% % L7=L_Con_SIM1;        %¸ßË¹ºË¡¶HGIMDA: Heterogeneous graph inference for miRNA-disease association prediction¡·
-% L5=L_Con_SIM;        %¸ßË¹ºË¡¶similarity network fusion for aggregating data types on a genomic scale¡·
+% Matrix1=H;            
+% Matrix2=F_Weight;     
+% Matrix3=A;            
+% Matrix4=B;           
+% L1=L;                
+% L2=Lh;                
+% % L3=L_SIM;             
+% L3=L_SIM_temp;       
+% % L5=L_N_SIM;         
+% L4=L_H_SIM;          
+% % L7=L_Con_SIM1;        %ã€ŠHGIMDA: Heterogeneous graph inference for miRNA-disease association predictionã€‹
+% L5=L_Con_SIM;        %ã€Šsimilarity network fusion for aggregating data types on a genomic scaleã€‹
 end
 
