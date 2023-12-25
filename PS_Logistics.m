@@ -1,7 +1,7 @@
 function [Beta,intercept]=PS_Logistics(X,y,alpha,lambda)
 [row,col] = size(X);
 %%
-%基因间相关信息
+%禄霉脪貌录盲脧脿鹿脴脨脜脧垄
 Weight = abs(corr(X)).^4;
 for i = 1: col
     for j = 1: col
@@ -11,14 +11,13 @@ for i = 1: col
     end
 end
 %%
-%权值
+%脠篓脰碌
 for i = 1 : col
     miu(i) = corr(y,X(:,i));
     if isnan(miu(i)) == 1 || (miu(i) == 0)
         miu(i) = 0.0001;
     end
 end
-
 miu1 = 1./(miu.^2);
 %%
 
