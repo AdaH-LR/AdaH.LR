@@ -6,7 +6,6 @@ addpath('./Evaluation function')
 addpath('./glmnet')
 
 load('D:\ziliao\daima\shiyandaima\data\GSE10072\GSE10072_Path_GO');
-%%
 Data=Data';
 Lable=Label';
 % Data=log2(Data+1);
