@@ -15,8 +15,7 @@ if nargin < 2
 end
 
 S = M - repmat(mu, [nrows 1]);
-%去中心化
 if ncols > 0
     S = S ./ repmat(sigma2, [nrows 1]);
-    %除以方差进行正则化
+
 end
