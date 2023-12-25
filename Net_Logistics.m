@@ -24,7 +24,6 @@ function [Beta,intercept]=Net_Logistics(X,y,Path,alpha,lambda)
 % % L=I-D.^(-0.5)*H*D.^(-0.5);
 
 L=Path;
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
 temp = sum(y)/row;
