@@ -89,7 +89,6 @@ while iter < maxiter %true
 %     if norm(beta_temp - beta) < (1E-5)
 %         break;
 %     end
-    
     iter = iter + 1;
     
     temp1=beta_zero+X*beta;
