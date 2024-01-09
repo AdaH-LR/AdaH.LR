@@ -101,7 +101,6 @@ L_H_SIM=sigma*reg_Lh+(1-sigma)*reg_SIM;
 %《similarity network fusion for aggregating data types on a genomic scale》
 D_Con_SIM = diag(sum(Con_SIM));
 L_Con_SIM = D_Con_SIM-Con_SIM;
-%%
 % Matrix1=H;            
 % Matrix2=F_Weight;     
 % Matrix3=A;            
