@@ -34,7 +34,6 @@ miu1 = 1./(miu.^2);
 
 Lh=Path;
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
 temp = sum(y)/row;
 beta_zero = log(temp/(1-temp));    %intercept
@@ -101,7 +100,7 @@ while iter < maxiter %true
 %         break;
 %     end
 end
-save('AWHRM_obj','obj');
+save('AdaH_obj','obj');
 Beta = beta;
 intercept = beta_zero;  
 end
