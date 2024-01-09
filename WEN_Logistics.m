@@ -1,7 +1,6 @@
 function [Beta,intercept]=WEN_Logistics(X,y,alpha,lambda)
 [row,col]=size(X);
 
-%权值
 miu1=[];
 for i=1:col
     mean_c1=mean(X(find(y==1),i));
@@ -19,7 +18,6 @@ for i=1:col
     miu1(i)=abs(WSS/BSS);
 end
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
 temp = sum(y)/row;
 beta_zero = log(temp/(1-temp));    %intercept
