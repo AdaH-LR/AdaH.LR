@@ -1,4 +1,4 @@
-function [Beta,intercept]=Ada_HRM_Logistics(X,y,Path,A,alpha,lambda,sigma)
+function [Beta,intercept]=Ada_H_Logistics(X,y,Path,A,alpha,lambda,sigma)
 [row,col]=size(X);
 % [paths,~]=size(Path);
 % 
