@@ -1,7 +1,6 @@
 function [Beta,intercept]=Abs_Net_Logistics(X,y,Path,alpha,lambda)
 [row,col]=size(X);
 % [paths,~]=size(Path);
-%
 % H=zeros(col);
 % for i=1:col
 %     for j=1:paths
