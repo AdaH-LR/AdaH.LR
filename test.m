@@ -1,6 +1,5 @@
 clear all
 clc
-addpath('./data/GSE40419')
 addpath('./Evaluation function')
 addpath('./glmnet')
 
