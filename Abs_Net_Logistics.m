@@ -25,7 +25,6 @@ function [Beta,intercept]=Abs_Net_Logistics(X,y,Path,alpha,lambda)
 
 L=Path;
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
 temp = sum(y)/row;
 beta_zero = log(temp/(1-temp));    %intercept
