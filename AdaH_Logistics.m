@@ -1,7 +1,6 @@
 function [Beta,intercept]=Ada_H_Logistics(X,y,Path,A,alpha,lambda,sigma)
 [row,col]=size(X);
 % [paths,~]=size(Path);
-% 
 % Path(sum(Path,2)==0,:)=[];
 
 for i = 1 : col
