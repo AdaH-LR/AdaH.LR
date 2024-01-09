@@ -1,7 +1,6 @@
 function [Beta,intercept]=M_Logistics(X,y,Path,alpha,lambda)
 [row,col]=size(X);
 % [paths,~]=size(Path);
-% 
 lambda1=lambda;
 lambda2=alpha;
 % 
