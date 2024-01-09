@@ -1,6 +1,5 @@
 clear all
 clc
-
 addpath('./data/GSE40419')
 addpath('./Evaluation function')
 addpath('./glmnet')
@@ -15,7 +14,6 @@ Lable=Label';
 Data=standardizeCols(Data);
 
 fold=5;
-%%
 L_beta=[];
 AL_beta=[];
 M_beta=[];
