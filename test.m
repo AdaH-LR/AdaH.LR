@@ -370,46 +370,7 @@ for i=1:n
     a=sum(Lasso_beta~=0);
     A=sum(EN_beta~=0);
 end
-AL=mean(Log_AL,2);
-al=mean(Log_al,2);
-NAL=mean(AL_num,2);
-L=mean(Log_L,2);
-l=mean(Log_l,2);
-NL=mean(L_num,2);
-M=mean(Log_M,2);
-m=mean(Log_m,2);
-NM=mean(M_num,2);
-PS=mean(Log_PS,2);
-ps=mean(Log_ps,2);
-NPS=mean(PS_num,2);
-WEN=mean(Log_WEN,2);
-wen=mean(Log_wen,2);
-NWEN=mean(WEN_num,2);
-EN=mean(Log_EN,2);
-en=mean(Log_en,2);
-NEN=mean(EN_num,2);
-Lasso=mean(Log_Lasso,2);
-lasso=mean(Log_lasso,2);
-NLasso=mean(Lasso_num,2);
 
-AH=mean(Log_AH,2);
-ah=mean(Log_ah,2);
-NAH=mean(AH_num,2);
-% AWH=mean(Log_AWH,2);
-% awh=mean(Log_awh,2);
-% NAWH=mean(AWH_num,2);
-AWHRM=mean(Log_AWHRM,2);
-awhrm=mean(Log_awhrm,2);
-NAWHRM=mean(AWHRM_num,2);
-MNet1=mean(Log_MNet1,2);
-mnet1=mean(Log_mnet1,2);
-NMNet1=mean(MNet1_num,2);
-MNet2=mean(Log_MNet2,2);
-mnet2=mean(Log_mnet2,2);
-NMNet2=mean(MNet2_num,2);
-MNet3=mean(Log_MNet3,2);
-mnet3=mean(Log_mnet3,2);
-NMNet3=mean(MNet3_num,2);
 
 % % AHRM=mean(Log_AHRM(:,161:70),2);
 % % AHRM1=mean(Log_AHRM1(:,161:70),2);
