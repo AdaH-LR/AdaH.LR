@@ -3,7 +3,6 @@ function [S, mu, sigma2] = standardizeCols(M, mu, sigma2)
 % Make each column of M be zero mean, std 1.
 %
 % If mu, sigma2 are omitted, they are computed from M
-
 [nrows ncols] = size(M);
 
 M = double(M);
