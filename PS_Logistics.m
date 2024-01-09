@@ -1,7 +1,5 @@
 function [Beta,intercept]=PS_Logistics(X,y,alpha,lambda)
 [row,col] = size(X);
-%%
-%»ùÒò¼äÏà¹ØÐÅÏ¢
 Weight = abs(corr(X)).^4;
 for i = 1: col
     for j = 1: col
