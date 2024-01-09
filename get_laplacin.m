@@ -1,7 +1,6 @@
 function [H,F_Weight,A,B,L,Lh,L_SIM_temp,L_H_SIM,L_Con_SIM]=get_laplacin(X,Path,SIM,Con_SIM)
 [row,col]=size(X);
 oe=ones(col,1);
-
 Path(sum(Path,2)==0,:)=[];
 % Empty_Index=find(sum(Path,2)==0);
 
